@@ -21,6 +21,11 @@ class Scraper:
 
 
     def scrape(self, dry_run: bool = False) -> Dict[str, any]:
+        if not dry_run:
+            # TODO: Fetch contents of URL
+            # TODO: Parse 
+            # TODO: Extract title, images, and stylesheets
+            pass
         return {
             'domain_name': self.components.netloc,
             'protocol': self.components.scheme,
