@@ -20,7 +20,7 @@ class Scraper:
             raise ValueError('Expected domain name or address in URL')
 
 
-    def scrape(self) -> Dict[str, any]:
+    def scrape(self, dry_run: bool = False) -> Dict[str, any]:
         return {
             'domain_name': self.components.netloc,
             'protocol': self.components.scheme,
