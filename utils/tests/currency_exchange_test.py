@@ -17,3 +17,9 @@ def test_exchange_rate_url():
     actual = exchange._make_exchange_rate_url(currency='USD', date=datetime.date(2010, 2, 24))
     expected = 'https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D.USD.EUR.SP00.A?startPeriod=2010-02-24'
     assert(actual == expected)
+
+
+def test_get_exchange_rate():
+    exchange = CurrencyExchange()
+    rate = exchange.get_exchange_rate(currency='USD', date=datetime.date(2020, 2, 23))
+    assert(str(rate) == '1.0818')
