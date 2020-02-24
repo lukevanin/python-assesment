@@ -10,12 +10,12 @@ d. “image”: the URLs of all the images <img>
 e. "stylesheets": the number of stylesheets present in the html of the page"""
 
 
-from src import scraper
+from utils.scraper import Scraper
 
 
 class Program:
 
-    def __init__(self, default_url: str = 'https://www.exampasdle.org/'):
+    def __init__(self, default_url: str = 'https://www.example.org/'):
         self.default_url = default_url
 
     def run(self):
@@ -26,12 +26,10 @@ class Program:
         url = input()
         if not url:
             url = self.default_url
-        print(f'URL: {url}')
         try:
-            s = scraper.Scraper(url=url)
+            s = Scraper(url=url)
             r = s.scrape()
             print(r)
-            print('Done')
         except ValueError as e:
             print(f'URL {url} is not valid. {e}')
             self.process()
