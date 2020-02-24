@@ -17,5 +17,11 @@ class Parser:
         return [image.get('src') for image in images if image.get('src') is not None]
 
     def stylesheets(self) -> int:
-        return 0
+        """https://www.w3.org/TR/html4/present/styles.html"""
+        count = len(self.soup.find_all(name='style'))
+        link_tags = self.soup.find_all(name='link')
+        for tag in link_tags:
+            if tag.get('type') == 'text/css':
+                count += 1
+        return count
     
