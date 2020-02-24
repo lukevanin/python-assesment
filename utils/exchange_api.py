@@ -11,7 +11,7 @@ class CurrencyExchange:
 
     def _make_exchange_rate_url(self, currency: str, date: datetime.date) -> str:
         date_string = date.strftime('%Y-%m-%d')
-        query = f'https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D.{currency}.EUR.SP00.A?startPeriod={date_string}'
+        query = f'https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D.{currency}.EUR.SP00.A?startPeriod={date_string}&endPeriod={date_string}'
         return query
 
     def _fetch_exchange_rate(self, currency: str, date: datetime.date ) -> str:
