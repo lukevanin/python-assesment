@@ -1,8 +1,10 @@
+import datetime
 import json
 
+from decimal import Decimal
 from typing import Union
 
-from decimal import Decimal
+import requests
 
 
 class CurrencyExchange:
@@ -39,7 +41,17 @@ class CurrencyExchange:
         output = Decimal(str(value))
         return output
 
-    def exchange_rate(currency: str) -> Decimal:
+    def _make_exchange_rate_url(self, currency: str, date: datetime.date) -> str:
+        date_string = date.strftime('%Y-%m-%d')
+        query = f'https://sdw-wsrest.ecb.europa.eu/service/data/EXR/D.{currency}.EUR.SP00.A?startPeriod={date_string}'
+        return query
+
+    def _fetch_exchange_rate(self, currency: str) -> str:
+        url = self._make_exchange_rate_url(currency)
+        response = requests.get(url, headers={ 'Accept': 'application/vnd.sdmx.data+json;version=1.0.0-wd' })
+        return response.text
+
+    def exchange_rate(self, currency: str) -> Decimal:
         # TODO: Get current date and convert to YYYY-MM-DD format
         # TODO: Fetch exchange rate data from the API
         # TODO: Parse and extract current exchange rate
