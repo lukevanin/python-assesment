@@ -33,3 +33,11 @@ the European Central Bank
 
 * ECB official API: https://sdw-wsrest.ecb.europa.eu/
 * Bitcoin API: https://www.blockchain.com/api/exchange_rates_api
+
+## Usage
+
+Requires python 3.7 or above.
+Install: `pip3 install -r requirements.txt`
+Test: `py.test`
+Run exercise one: `python3 One.py`
+Run exercise two: `python3 Two.py`
