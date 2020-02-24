@@ -10,7 +10,15 @@ class Scraper:
         # urlparse will raise a ValueError if the input string cannot be parsed
         # https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlparse
         self.components = urlparse(url)
-        
+
+        # Verify that the URL has a scheme:
+        if not self.components.scheme:
+            raise ValueError('Expected protocol / scheme in URL')
+
+        # Verify that the URL has a domain:
+        if not self.components.netloc:
+            raise ValueError('Expected domain name or address in URL')
+
 
     def scrape(self) -> Dict[str, any]:
         return {
