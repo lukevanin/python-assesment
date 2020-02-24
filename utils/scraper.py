@@ -20,7 +20,7 @@ class Scraper:
             raise ValueError('Expected domain name or address in URL')
 
 
-    def scrape(self, dry_run: bool = False) -> Dict[str, any]:
+    def scrape(self, dry_run: bool = False) -> dict:
         if not dry_run:
             # TODO: Fetch contents of URL
             # TODO: Parse 
