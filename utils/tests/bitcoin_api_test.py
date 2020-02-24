@@ -10,3 +10,9 @@ def test_parse_price_data():
         api = Bitcoin()
         price = api._parse_bitcoin_price(data=data, currency='EUR')
         assert(str(price) == '8886.61')
+
+
+def test_get_price():
+    api = Bitcoin()
+    price = api.get_bitcoin_price(currency='USD')
+    assert(str(price) != '')

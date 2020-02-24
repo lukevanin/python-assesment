@@ -16,7 +16,8 @@ class Bitcoin:
  
     def _fetch_bitcoin_price_data(self) -> dict:
         response = requests.get('https://blockchain.info/ticker', headers={ 'Accept': 'application/json' })
-        return response.json
+        return response.json()
 
-    def get_bitcoin_price(self, currency: str) -> dict:
-        pass
+    def get_bitcoin_price(self, currency: str) -> Decimal:
+        data = self._fetch_bitcoin_price_data()
+        return self._parse_bitcoin_price(data=data, currency=currency)
