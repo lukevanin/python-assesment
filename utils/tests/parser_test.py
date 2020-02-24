@@ -8,6 +8,27 @@ def test_parser_init_empty_doc():
     parser = Parser(html=doc)
 
 
+def test_complete_doc():
+    doc = """<html>
+    <head>
+        <title>Bar</title>
+        <style></style>
+        <link type="text/css" />
+        <link />
+        <link type="text/css" />
+    </head>
+    <body>
+        <img src="http://example.org/foo.png" >
+        <img >
+        <img src="http://example.org/bar.jpg" >
+    </body>
+    </html>"""
+    p = Parser(html=doc)
+    assert(p.title() == 'Bar')
+    assert(p.images() == ['http://example.org/foo.png', 'http://example.org/bar.jpg'])
+    assert(p.stylesheets() == 3)
+
+
 # Title
 
 
