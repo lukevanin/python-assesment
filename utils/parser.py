@@ -13,7 +13,8 @@ class Parser:
         return title.string if title else ''
 
     def images(self) -> List[str]:
-        return []
+        images = self.soup.find_all(name='img')
+        return [image.get('src') for image in images if image.get('src') is not None]
 
     def stylesheets(self) -> int:
         return 0

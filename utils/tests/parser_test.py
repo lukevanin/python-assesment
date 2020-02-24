@@ -15,3 +15,21 @@ def test_parse_title():
     doc = """<html><head><title>Foo</title></head></html>"""
     parser = Parser(html=doc)
     assert(parser.title() == 'Foo')
+
+
+def test_parse_image():
+    doc = """<html><body><img src="http://example.org/foo.png" ></body></html>"""
+    parser = Parser(html=doc)
+    assert(parser.images() == ['http://example.org/foo.png'])
+
+
+def test_parse_no_src_image():
+    doc = """<html><body><img ></body></html>"""
+    parser = Parser(html=doc)
+    assert(parser.images() == [])
+
+
+def test_parse_no_image():
+    doc = """<html><body></body></html>"""
+    parser = Parser(html=doc)
+    assert(parser.images() == [])
