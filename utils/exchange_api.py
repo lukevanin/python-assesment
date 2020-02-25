@@ -13,7 +13,8 @@ class CurrencyExchange:
     See: https://sdw-wsrest.ecb.europa.eu/help/"""
 
     def _make_exchange_rate_url(self, currency: str, date: datetime.date) -> str:
-        """Compose a URL for fetching an exchange rate for the month for a given date."""
+        """Compose a URL for reteiving exchange rate data for the month for a given date, where the startPeriod is the 
+        beginning of the month for the given date, and the endPeriod is the last day of the month for the given date."""
         (_, days_in_month) = calendar.monthrange(date.year, date.month)
         month_end_date = datetime.date(date.year, date.month, days_in_month)
         month_start_date = datetime.date(date.year, date.month, 1)
@@ -23,7 +24,8 @@ class CurrencyExchange:
         return query
 
     def _parse_last_modified(self, headers: dict) -> Optional[datetime.date]:
-        """Sun, 06 Nov 1994 08:49:37 GMT -> 1994-11-06"""
+        """Parses the date from the "Last-Modified" header value if available, or raises a ValueError otherwise.
+        E.g. { 'Last-Modified': 'Sun, 06 Nov 1994 08:49:37 GMT' } -> '1994-11-06'"""
         # TODO: Get header ignoring case.
         value = headers.get('Last-Modified')
         if not value:
@@ -33,8 +35,11 @@ class CurrencyExchange:
             raise ValueError(f'Unexpected format for Last-Modified header: {value}')
         return time.date()
 
-    def _fetch_exchange_rate(self, currency: str, date: datetime.date) -> str:
-        """Fetch exchange rates for a specific currency on a specific day."""
+    def _fetch_exchange_rate(self, currency: str, date: datetime.date) -> dict:
+        """Fetch exchange rate for a specific currency for the given month. If currency data is not available for the 
+        date, earlier data will be returned intead.
+        Returns an SDMX data dict.
+        See: https://sdmx.org/wp-content/uploads/SDMX_2-1-1-SECTION_07_WebServicesGuidelines_2013-04.pdf"""
         url = self._make_exchange_rate_url(currency=currency, date=date)
         headers = { 'Accept': 'application/vnd.sdmx.data+json;version=1.0.0-wd' }
         response = requests.get(url, headers=headers)
@@ -54,7 +59,10 @@ class CurrencyExchange:
         return response.json()
 
     def _parse_exchange_rate(self, data: dict) -> Optional[Decimal]:
-        """Parse the daily exchange rate from a SDMX JSON structure. 
+        """Parse the daily exchange rate from a SDMX JSON structure. This is intended to provide minimal functionality 
+        needed to extract data from the response payload. This will extract only the first observation metric, ignoring
+        any other metrics, which is sufficient for prurpose. A production parser may want to handle multiple 
+        observations, possibly returning the data as a list or aggregate.
         See: https://sdmx.org/wp-content/uploads/SDMX_2-1-1-SECTION_07_WebServicesGuidelines_2013-04.pdf"""
         # NOTE: Use nil coalescing operators in python 3.8
         data_sets = data.get('dataSets')
@@ -87,5 +95,10 @@ class CurrencyExchange:
         return output
 
     def get_exchange_rate(self, currency: str, date: datetime.date) -> Decimal:
+        """Retrieves the latest available monthly average Euro exchange rate for a given currency (e.g. GBP) and for a 
+        given month, from the European Central Bank. 
+        Note: The returned value is an average for the exchange rate over the given month, not a specific date. If the 
+        monthly average exchange rate is not available (ie you're requesting the average for the current calendar 
+        month), then an older exchange rate will be returned instead."""
         data = self._fetch_exchange_rate(currency=currency, date=date)
         return self._parse_exchange_rate(data)
