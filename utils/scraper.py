@@ -23,7 +23,9 @@ class Scraper:
         if not self.components.scheme:
             raise ValueError('Expected protocol / scheme in URL')
 
-        # TODO: Validation & tests: Verify that the URL always has at least a domain or a path.
+        # TODO: Validation & tests: Verify that the URL always has at least a domain or a path. 
+
+        # TODO: Check that the UTL scheme is one that is supported by the requests library.
 
         # Verify that the URL has a domain:
         # if not self.components.netloc:
@@ -56,9 +58,12 @@ class Scraper:
             # TODO: Better error handling. Errors are not handled here. Program will simply crash if there is a problem 
             # opening the given file or URL.
             if self.components.scheme == 'file':
+                # URL refers to a file. Try load the web page from the file path.
                 with open(self.components.path, 'r') as fp:
                     html = fp.read()
             else:
+                # Other non-file URL (http, https, ftp, etc).
+                # TODO: This has on;y been tested with http and https. Test this with protocols.
                 html = requests.get(self.url).text
             parser = Parser(html=html)
             title = parser.title()

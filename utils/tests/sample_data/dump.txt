@@ -1,0 +1,176 @@
+== Info:   Trying 185.5.82.151...
+== Info: TCP_NODELAY set
+== Info: Connected to sdw-wsrest.ecb.europa.eu (185.5.82.151) port 443 (#0)
+== Info: ALPN, offering h2
+== Info: ALPN, offering http/1.1
+== Info: Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+== Info: successfully set certificate verify locations:
+== Info:   CAfile: /etc/ssl/cert.pem
+  CApath: none
+== Info: TLSv1.2 (OUT), TLS handshake, Client hello (1):
+=> Send SSL data, 230 bytes (0xe6)
+0000: .......A..BK....E.....a.d......_}.+....T.0.,.(.$.......k.9.....
+0040: ............=.5...../.+.'.#.......g.3...E...<./...A.............
+0080: e.........sdw-wsrest.ecb.europa.eu..............................
+00c0: ...........................h2.http/1.1
+== Info: TLSv1.2 (IN), TLS handshake, Server hello (2):
+<= Recv SSL data, 108 bytes (0x6c)
+0000: ...h.....).......K...V........d...9.Yv .....h.c.....Vb.$...px...
+0040: ......../.. ........................http/1.1
+== Info: TLSv1.2 (IN), TLS handshake, Certificate (11):
+<= Recv SSL data, 3189 bytes (0xc75)
+0000: ...q..n..V0..R0..:.........?$D...O....P.l.0...*.H........0..1.0.
+0040: ..U....US1.0...U....Entrust, Inc.1(0&..U....See www.entrust.net/
+0080: legal-terms1907..U...0(c) 2012 Entrust, Inc. - for authorized us
+00c0: e only1.0,..U...%Entrust Certification Authority - L1K0...180604
+0100: 131121Z..200903134120Z0l1.0...U....DE1.0...U....Frankfurt am Mai
+0140: n1.0...U....European Central Bank1!0...U....sdw-wsrest.ecb.europ
+0180: a.eu0.."0...*.H.............0.........N%.....?....f.e.Of........
+01c0: ..g._....;..z-D....C.:...02o..c.i...7.Q&.~.v..]...RE..'2^^....h.
+0200: ...Qz...z...]*.l..N5b.....#....q.......\....ewA..y..FC.%.^z..o-.
+0240: ..$k...kU.G...aa......6$.g..e.qm.q3..t.:......o.q.I..T/...rd..r.
+0280: ...h>.O-NK........a+.B.b4.7Sm.By)fu+9.........0...07..U...00...s
+02c0: dw-wsrest.ecb.europa.eu..sdw-wsrest.ecb.int0.....+.....y........
+0300: ......v....+z.O. ....hp~.....\..=..........c...S.....G0E.!.....n
+0340: ..T.E..?O.y...`......+.#.M.. [.........."S|.o........4`.m.Uw..u.
+0380: U.....6.J...W<S...8xp%../..........c...h.....F0D. x)7..>.2s.....
+03c0: .v..1.H.."..y....O. QT.....FZ.\u....rW.<...nB....5...w.V.../....
+0400: ...D.>.Fv....\....U.......c.........H0F.!..lM.#..EB.....i..D?.]O
+0440: a..a.......!.........U..W..E"..rR....+.....V..w.......q...#...{G
+0480: 8W...R....d6.......c...x.....H0F.!...pY.....;.K......zq..+H..E!
+04c0: .._.!....{.]......{Th...t..L&f...u....0...U...........0...U.%..0
+0500: ...+.........+.......03..U...,0*0(.&.$."http://crl.entrust.net/l
+0540: evel1k.crl0K..U. .D0B06..`.H...l...0(0&..+.........http://www.en
+0580: trust.net/rpa0...g.....0h..+........\0Z0#..+.....0...http://ocsp
+05c0: .entrust.net03..+.....0..'http://aia.entrust.net/l1k-chain256.ce
+0600: r0...U.#..0.....pt..S?.{....`..L.0...U......2......t5...,....O%
+0640: .0...U....0.0...*.H....................y..a.....{.9S'.Tl.b..r..t
+0680: &<c.d......e&.C).ek.u..=.n.........H..,....Z\W.o.m...3.........
+06c0: .L...{...%Q..*..V.. ..0..g..I.y.c.3...v}..;.L....a.....c..Rm..W<
+0700: |...g.e.}....\/..p.Hs....^W/..6.5^.. .R%..?..D<sb..x........2". 
+0740: Y...>[../.._....aK..@.u...N.......0...0............L.....Q.w.0.
+0780: ..*.H........0..1.0...U....US1.0...U....Entrust, Inc.1(0&..U....
+07c0: See www.entrust.net/legal-terms1907..U...0(c) 2009 Entrust, Inc.
+0800:  - for authorized use only1200..U...)Entrust Root Certification 
+0840: Authority - G20...151005191356Z..301205194356Z0..1.0...U....US1.
+0880: 0...U....Entrust, Inc.1(0&..U....See www.entrust.net/legal-terms
+08c0: 1907..U...0(c) 2012 Entrust, Inc. - for authorized use only1.0,.
+0900: .U...%Entrust Certification Authority - L1K0.."0...*.H..........
+0940: ...0.........?..M./D..9^.P.\.a.AgS.....W)k...!$.:..G#..r...!.].
+0980: .K.....2h..%.,.}............{|I."h...G.1.z.}@...>.....H....)X...
+09c0: .Z.s&&.X..B...sydhS%....z..E..kM......6.......:R.^m..........x.
+0a00: =.m,....A.qDh.G<..].>.5........?G..8.sE]M.;...)7...."..6*.[5.S./
+0a40: .F.*..b.N+...........0...0...U...........0...U.......0.......03.
+0a80: .+........'0%0#..+.....0...http://ocsp.entrust.net00..U...)0'0%.
+0ac0: #.!..http://crl.entrust.net/g2ca.crl0;..U. .40200..U. .0(0&..+..
+0b00: .......http://www.entrust.net/rpa0...U........pt..S?.{....`..L.
+0b40: 0...U.#..0...jr&z...}.;iQ.l....f.0...*.H.............9....a.,c.p
+0b80: ..0.....i...7A.2..t.X.x'.4.../...........?Mh+.1...R....P.....h.:
+0bc0: .t.4X.?w.@..h.]..F.......\..q................\..J.!..?I$g......d
+0c00: ..r.lw.R......J5..os.u.kd..........M.. ..j..Khf.+.X..V......1X..
+0c40: D.u{...8.....dl....U.Q..'P..<[.C.[......P@g..U..~n-.
+== Info: TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+<= Recv SSL data, 300 bytes (0x12c)
+0000: ...(... V.,.#R..T..7...w&........_..|?........u.{...i8..JL.,.x..
+0040: .V....+..#.B.A4.C...@-..........L.^..]B......8...X..:~.....<.,.
+0080: l..W.......8.......W.*D6......g|..!OCY.8=.L....F...q3.C..]..g...
+00c0: ...Sq.2_F....`S......gW...jr..Q..T...U_.!.:wZ|...8.......7,M.n..
+0100: &...n.(.M..W...P....B...0.F.d..n..H5...K.?.\
+== Info: TLSv1.2 (IN), TLS handshake, Server finished (14):
+<= Recv SSL data, 4 bytes (0x4)
+0000: ....
+== Info: TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+=> Send SSL data, 37 bytes (0x25)
+0000: ...! j.;.O...>....LXD{P..V{..U..;...'
+== Info: TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+=> Send SSL data, 1 bytes (0x1)
+0000: .
+== Info: TLSv1.2 (OUT), TLS handshake, Finished (20):
+=> Send SSL data, 16 bytes (0x10)
+0000: ......k..cj....H
+== Info: TLSv1.2 (IN), TLS change cipher, Client hello (1):
+<= Recv SSL data, 1 bytes (0x1)
+0000: .
+== Info: TLSv1.2 (IN), TLS handshake, Finished (20):
+<= Recv SSL data, 16 bytes (0x10)
+0000: ....h.G..F.e..&.
+== Info: SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+== Info: ALPN, server accepted to use http/1.1
+== Info: Server certificate:
+== Info:  subject: C=DE; L=Frankfurt am Main; O=European Central Bank; CN=sdw-wsrest.ecb.europa.eu
+== Info:  start date: Jun  4 13:11:21 2018 GMT
+== Info:  expire date: Sep  3 13:41:20 2020 GMT
+== Info:  subjectAltName: host "sdw-wsrest.ecb.europa.eu" matched cert's "sdw-wsrest.ecb.europa.eu"
+== Info:  issuer: C=US; O=Entrust, Inc.; OU=See www.entrust.net/legal-terms; OU=(c) 2012 Entrust, Inc. - for authorized use only; CN=Entrust Certification Authority - L1K
+== Info:  SSL certificate verify ok.
+=> Send header, 144 bytes (0x90)
+0000: GET /service/data/EXR/D.USD.EUR.SP00.A?startPeriod=2020-02-23 HT
+0040: TP/1.1
+0048: Host: sdw-wsrest.ecb.europa.eu
+0068: User-Agent: curl/7.54.0
+0081: Accept: */*
+008e: 
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.1 200 OK
+<= Recv header, 19 bytes (0x13)
+0000: Server: myracloud
+<= Recv header, 37 bytes (0x25)
+0000: Date: Tue, 25 Feb 2020 09:50:52 GMT
+<= Recv header, 65 bytes (0x41)
+0000: Content-Type: application/vnd.sdmx.genericdata+xml; version=2.1
+<= Recv header, 28 bytes (0x1c)
+0000: Transfer-Encoding: chunked
+<= Recv header, 24 bytes (0x18)
+0000: Connection: keep-alive
+<= Recv header, 22 bytes (0x16)
+0000: Vary: accept, origin
+<= Recv header, 46 bytes (0x2e)
+0000: Cache-Control: no-cache, no-store, max-age=0
+<= Recv header, 46 bytes (0x2e)
+0000: Last-Modified: Mon, 24 Feb 2020 14:56:43 GMT
+<= Recv header, 10 bytes (0xa)
+0000: X-CDN: 1
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 2352 bytes (0x930)
+0000: 924
+0005: <?xml version="1.0" encoding="UTF-8"?><message:GenericData xmlns
+0045: :message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/mess
+0085: age" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/
+00c5: v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instanc
+0105: e" xmlns:generic="http://www.sdmx.org/resources/sdmxml/schemas/v
+0145: 2_1/data/generic" xsi:schemaLocation="http://www.sdmx.org/resour
+0185: ces/sdmxml/schemas/v2_1/message https://sdw-wsrest.ecb.europa.eu
+01c5: :443/vocabulary/sdmx/2_1/SDMXMessage.xsd http://www.sdmx.org/res
+0205: ources/sdmxml/schemas/v2_1/common https://sdw-wsrest.ecb.europa.
+0245: eu:443/vocabulary/sdmx/2_1/SDMXCommon.xsd http://www.sdmx.org/re
+0285: sources/sdmxml/schemas/v2_1/data/generic https://sdw-wsrest.ecb.
+02c5: europa.eu:443/vocabulary/sdmx/2_1/SDMXDataGeneric.xsd">.<message
+0305: :Header>.<message:ID>3ec137cb-1a35-4028-9303-766c8eccc5c2</messa
+0345: ge:ID>.<message:Test>false</message:Test>.<message:Prepared>2020
+0385: -02-25T10:30:49.640+01:00</message:Prepared>.<message:Sender id=
+03c5: "ECB"/>.<message:Structure structureID="ECB_EXR1" dimensionAtObs
+0405: ervation="TIME_PERIOD">.<common:Structure>.<URN>urn:sdmx:org.sdm
+0445: x.infomodel.datastructure.DataStructure=ECB:ECB_EXR1(1.0)</URN>.
+0485: </common:Structure>.</message:Structure>.</message:Header>.<mess
+04c5: age:DataSet action="Replace" validFromDate="2020-02-25T10:30:49.
+0505: 640+01:00" structureRef="ECB_EXR1">.<generic:Series>.<generic:Se
+0545: riesKey>.<generic:Value id="FREQ" value="D"/>.<generic:Value id=
+0585: "CURRENCY" value="USD"/>.<generic:Value id="CURRENCY_DENOM" valu
+05c5: e="EUR"/>.<generic:Value id="EXR_TYPE" value="SP00"/>.<generic:V
+0605: alue id="EXR_SUFFIX" value="A"/>.</generic:SeriesKey>.<generic:A
+0645: ttributes>.<generic:Value id="SOURCE_AGENCY" value="4F0"/>.<gene
+0685: ric:Value id="UNIT_MULT" value="0"/>.<generic:Value id="COLLECTI
+06c5: ON" value="A"/>.<generic:Value id="TITLE_COMPL" value="ECB refer
+0705: ence exchange rate, US dollar/Euro, 2:15 pm (C.E.T.)"/>.<generic
+0745: :Value id="UNIT" value="USD"/>.<generic:Value id="TITLE" value="
+0785: US dollar/Euro"/>.<generic:Value id="TIME_FORMAT" value="P1D"/>.
+07c5: <generic:Value id="DECIMALS" value="4"/>.</generic:Attributes>.<
+0805: generic:Obs>.<generic:ObsDimension value="2020-02-24"/>.<generic
+0845: :ObsValue value="1.0818"/>.<generic:Attributes>.<generic:Value i
+0885: d="OBS_STATUS" value="A"/>.<generic:Value id="OBS_CONF" value="F
+08c5: "/>.</generic:Attributes>.</generic:Obs>.</generic:Series>.</mes
+0905: sage:DataSet>.</message:GenericData>
+092b: 0
+092e: 
+== Info: Connection #0 to host sdw-wsrest.ecb.europa.eu left intact

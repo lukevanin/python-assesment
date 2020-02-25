@@ -1,0 +1,86 @@
+== Info:   Trying 185.5.82.151...
+== Info: TCP_NODELAY set
+== Info: Connected to sdw-wsrest.ecb.europa.eu (185.5.82.151) port 80 (#0)
+=> Send header, 188 bytes (0xbc)
+0000: GET /service/data/EXR/M.GBP.EUR.SP00.A?startPeriod=2020-01-01 HT
+0040: TP/1.1
+0048: Host: sdw-wsrest.ecb.europa.eu
+0068: User-Agent: curl/7.54.0
+0081: Accept: application/vnd.sdmx.data+json;version=1.0.0-wd
+00ba: 
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.1 200 OK
+<= Recv header, 19 bytes (0x13)
+0000: Server: myracloud
+<= Recv header, 37 bytes (0x25)
+0000: Date: Tue, 25 Feb 2020 10:49:23 GMT
+<= Recv header, 64 bytes (0x40)
+0000: Content-Type: application/vnd.sdmx.data+json; version=1.0.0-wd
+<= Recv header, 28 bytes (0x1c)
+0000: Transfer-Encoding: chunked
+<= Recv header, 24 bytes (0x18)
+0000: Connection: keep-alive
+<= Recv header, 22 bytes (0x16)
+0000: Vary: accept, origin
+<= Recv header, 46 bytes (0x2e)
+0000: Cache-Control: no-cache, no-store, max-age=0
+<= Recv header, 46 bytes (0x2e)
+0000: Last-Modified: Fri, 31 Jan 2020 15:30:00 GMT
+<= Recv header, 10 bytes (0xa)
+0000: X-CDN: 1
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 1125 bytes (0x465)
+0000: bde
+0005: {"header":{"id":"c2ad1674-8f1b-4c3d-8b1c-d6c41655ac0d","test":fa
+0045: lse,"prepared":"2020-02-25T11:49:10.742+01:00","sender":{"id":"E
+0085: CB"}},"dataSets":[{"action":"Replace","validFrom":"2020-02-25T11
+00c5: :49:10.742+01:00","series":{"0:0:0:0:0":{"attributes":[0,null,0,
+0105: null,null,null,null,null,null,null,null,null,0,null,0,null,0,0,0
+0145: ,0],"observations":{"0":[0.849272727272728,0,null,null,null]}}}}
+0185: ],"structure":{"links":[{"title":"Exchange Rates","rel":"dataflo
+01c5: w","href":"http://sdw-wsrest.ecb.europa.eu:80/service/dataflow/E
+0205: CB/EXR/1.0"}],"name":"Exchange Rates","dimensions":{"series":[{"
+0245: id":"FREQ","name":"Frequency","values":[{"id":"M","name":"Monthl
+0285: y"}]},{"id":"CURRENCY","name":"Currency","values":[{"id":"GBP","
+02c5: name":"UK pound sterling"}]},{"id":"CURRENCY_DENOM","name":"Curr
+0305: ency denominator","values":[{"id":"EUR","name":"Euro"}]},{"id":"
+0345: EXR_TYPE","name":"Exchange rate type","values":[{"id":"SP00","na
+0385: me":"Spot"}]},{"id":"EXR_SUFFIX","name":"Series variation - EXR 
+03c5: context","values":[{"id":"A","name":"Average"}]}],"observation":
+0405: [{"id":"TIME_PERIOD","name":"Time period or range","role":"time"
+0445: ,"values":[{"id":"2020-01","name
+<= Recv data, 1925 bytes (0x785)
+0000: ":"2020-01","start":"2020-01-01T00:00:00.000+01:00","end":"2020-
+0040: 01-31T23:59:59.999+01:00"}]}]},"attributes":{"series":[{"id":"TI
+0080: ME_FORMAT","name":"Time format code","values":[{"name":"P1M"}]},
+00c0: {"id":"BREAKS","name":"Breaks","values":[]},{"id":"COLLECTION","
+0100: name":"Collection indicator","values":[{"id":"A","name":"Average
+0140:  of observations through period"}]},{"id":"COMPILING_ORG","name"
+0180: :"Compiling organisation","values":[]},{"id":"DISS_ORG","name":"
+01c0: Data dissemination organisation","values":[]},{"id":"DOM_SER_IDS
+0200: ","name":"Domestic series ids","values":[]},{"id":"PUBL_ECB","na
+0240: me":"Source publication (ECB only)","values":[]},{"id":"PUBL_MU"
+0280: ,"name":"Source publication (Euro area only)","values":[]},{"id"
+02c0: :"PUBL_PUBLIC","name":"Source publication (public)","values":[]}
+0300: ,{"id":"UNIT_INDEX_BASE","name":"Unit index base","values":[]},{
+0340: "id":"COMPILATION","name":"Compilation","values":[]},{"id":"COVE
+0380: RAGE","name":"Coverage","values":[]},{"id":"DECIMALS","name":"De
+03c0: cimals","values":[{"id":"5","name":"Five"}]},{"id":"NAT_TITLE","
+0400: name":"National language title","values":[]},{"id":"SOURCE_AGENC
+0440: Y","name":"Source agency","values":[{"id":"4F0","name":"European
+0480:  Central Bank (ECB)"}]},{"id":"SOURCE_PUB","name":"Publication s
+04c0: ource","values":[]},{"id":"TITLE","name":"Title","values":[{"nam
+0500: e":"UK pound sterling/Euro"}]},{"id":"TITLE_COMPL","name":"Title
+0540:  complement","values":[{"name":"ECB reference exchange rate, UK 
+0580: pound sterling/Euro, 2:15 pm (C.E.T.)"}]},{"id":"UNIT","name":"U
+05c0: nit","values":[{"id":"GBP","name":"UK pound sterling"}]},{"id":"
+0600: UNIT_MULT","name":"Unit multiplier","values":[{"id":"0","name":"
+0640: Units"}]}],"observation":[{"id":"OBS_STATUS","name":"Observation
+0680:  status","values":[{"id":"A","name":"Normal value"}]},{"id":"OBS
+06c0: _CONF","name":"Observation confidentiality","values":[]},{"id":"
+0700: OBS_PRE_BREAK","name":"Pre-break observation value","values":[]}
+0740: ,{"id":"OBS_COM","name":"Observation comment","values":[]}]}}}
+0780: 0
+0783: 
+== Info: Connection #0 to host sdw-wsrest.ecb.europa.eu left intact
